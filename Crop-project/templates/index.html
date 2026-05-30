@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Crop Recommendation System</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2{
+            text-align: center;
+            color: green;
+        }
+
+        input{
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: darkgreen;
+        }
+
+        h3{
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>🌱 Smart Crop Recommendation System</h2>
+
+    <form action="/predict" method="post">
+
+        <input type="text" name="N" placeholder="Nitrogen" required>
+
+        <input type="text" name="P" placeholder="Phosphorus" required>
+
+        <input type="text" name="K" placeholder="Potassium" required>
+
+        <input type="text" name="temperature" placeholder="Temperature" required>
+
+        <input type="text" name="humidity" placeholder="Humidity" required>
+
+        <input type="text" name="ph" placeholder="pH Value" required>
+
+        <input type="text" name="rainfall" placeholder="Rainfall" required>
+
+        <button type="submit">Predict Crop</button>
+
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+</html>
